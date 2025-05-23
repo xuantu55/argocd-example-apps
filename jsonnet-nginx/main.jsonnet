@@ -1,7 +1,8 @@
 local params = import 'params.libsonnet';
 local common = import 'apps/common.jsonnet';
-local nginxValues = import 'environments/dev/nginx.jsonnet';
-local redisValues = import 'environments/dev/redis.jsonnet';
+local env = std.extVar('environment');
+local nginxValues = import 'environments/' + env + '/nginx.jsonnet';
+local redisValues = import 'environments/' + env + '/redis.jsonnet';
 
 {
   apiVersion: 'v1',
