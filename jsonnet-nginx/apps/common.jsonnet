@@ -5,7 +5,6 @@ function(params)
     kind: 'Deployment',
     metadata: {
       name: params.name,
-      namespace: params.namespace,
       labels: params.labels,
     },
     spec: {
@@ -38,7 +37,6 @@ function(params)
     kind: 'Service',
     metadata: {
       name: params.name,
-      namespace: params.namespace,
       labels: params.labels,
     },
     spec: {
